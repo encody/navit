@@ -21,10 +21,10 @@ __pure_set_default pure_symbol_horizontal_bar "—"
 
 __pure_set_default pure_color_red (set_color red)
 __pure_set_default pure_color_green (set_color green)
-__pure_set_default pure_color_blue (set_color blue)
+__pure_set_default pure_color_blue (set_color brblue)
 __pure_set_default pure_color_yellow (set_color yellow)
-__pure_set_default pure_color_cyan (set_color cyan)
-__pure_set_default pure_color_gray (set_color 93A1A1)
+__pure_set_default pure_color_cyan (set_color brcyan)
+__pure_set_default pure_color_gray (set_color white)
 __pure_set_default pure_color_normal (set_color normal)
 
 __pure_set_default pure_username_color $pure_color_gray
@@ -75,7 +75,7 @@ function pre_prompt --on-event fish_prompt
   end
 
   # Format current folder on prompt output
-  set pre_prompt $pre_prompt "$pure_color_blue"(prompt_pwd)"$pure_color_normal "
+  set pre_prompt $pre_prompt "$pure_color_cyan"(prompt_pwd)"$pure_color_normal "
 
   # Exit with code 1 if git is not available
   if not type -fq git
