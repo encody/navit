@@ -11,7 +11,7 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
 
 # Symbols
 
-__pure_set_default pure_symbol_prompt "❯"
+__pure_set_default pure_symbol_prompt ""
 __pure_set_default pure_symbol_git_down_arrow "⇣"
 __pure_set_default pure_symbol_git_up_arrow "⇡"
 __pure_set_default pure_symbol_git_dirty "*"
@@ -75,7 +75,7 @@ function pre_prompt --on-event fish_prompt
   end
 
   # Format current folder on prompt output
-  set pre_prompt $pre_prompt "$pure_color_blue$current_folder$pure_color_normal "
+  set pre_prompt $pre_prompt "$pure_color_blue"(prompt_pwd)"$pure_color_normal "
 
   # Exit with code 1 if git is not available
   if not type -fq git
